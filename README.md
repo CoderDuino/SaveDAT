@@ -54,3 +54,22 @@ That's it, all of the current commands!
 If you encountor any bugs or errors while
 using this library please report them to my github page.
 Thank you!
+
+# Cloud Saves (Samba Share Storage)
+
+To Easily save your Pyhon environment to the cloud call setloader with
+the Cloud access info. Use cloudmode as true to make this save to samba server
+
+`setloader(ip, user, passwd, cloudmode ,timeout=15, port=139, name_port=137, direct_tcp=False)`
+
+To Save to the cloud you must manually save
+
+`savelink(sharename="Network")`
+
+# State Save Interface
+
+To clarify an entry point function use the entry point decorator
+above the command you want to be the entry point, and put all 
+arguments in a comma seperated string
+
+`@entrypoint(<arguments>)`
